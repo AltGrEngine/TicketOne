@@ -11,19 +11,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.example.TicketOne.service.UtenteService;
 
 @Controller
-public class RegistrazioneController {
+public class ModificaController {
 
     @Autowired
-    private UtenteService utService;
-
-    @RequestMapping(path = "/login", method = RequestMethod.GET)
-    public String login(@RequestParam Map<String, String> params){
-
-        utService.addUtente(params);
-
-        return "login.html";
-    }
-
+    private UtenteService uService;
     
+    @RequestMapping(path = "/modificaDati", method = RequestMethod.GET)
+    public String modUtente(@RequestParam Map<String, String> params){
+        uService.modUtente(params);
+        return "redirect:/areaRiservata?username=" + params.get("username");
+    }
 
 }

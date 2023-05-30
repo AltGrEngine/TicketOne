@@ -58,7 +58,7 @@
       <td></td>
     </tr>
     <tr>
-      <td th:text="${session.utente.nome}"></td>
+      <td>NOME</td>
       <td>Dicci cosa ti piace e ti invieremo</td>
       <td>Se vuoi cambiare username e/o password</td>
     </tr>
@@ -68,12 +68,17 @@
       <td>clicca il tasto qui sotto.</td>
     </tr>
     <tr>
-      <td th:text="${session.utente.luogo_nascita}"></td>
+      <td>LUOGO NASCITA</td>
       <td>dei tuoi artisti preferiti.</td>
       <td>
-        <form action="/modificaCredenziali">
+        <form action="/modCredenziali">
           <input type="submit" value="Modifica credenziali" name="modCred" id="modCred"
-            style="border: none; background-color: white; color: rgb(19, 157, 244); text-decoration:underline; cursor: pointer;">
+            style="border: none; 
+                   background-color: white; 
+                   color: rgb(19, 157, 244); 
+                   text-decoration: underline; 
+                   cursor: pointer;
+                   ">
         </form>
       </td>
     </tr>
@@ -81,16 +86,21 @@
       <td>Italia</td>
     </tr>
     <tr>
-      <td th:text="${session.utente.email}">E-mail: example@example.it</td>
+      <td>E-mail: example@example.it</td>
     </tr>
     <tr>
-      <td th:text="${session.utente.data_nascita}">Data di nascita: gg/mm/yyyy</td>
+      <td>Data di nascita: gg/mm/yyyy</td>
     </tr>
     <tr>
       <td>
-        <form action="/modificaDati">
+        <form action="/modDati">
           <input type="submit" value="Modifica dati" name="modDati" id="modDati"
-            style="border: none; background-color: white; color: rgb(19, 157, 244); text-decoration:underline; cursor: pointer;">
+            style="border: none; 
+                   background-color: white; 
+                   color: rgb(19, 157, 244);
+                   text-decoration:underline; 
+                   cursor: pointer;
+                   ">
         </form>
       </td>
     </tr>

@@ -19,7 +19,7 @@ public class UtenteService {
 	@Autowired
 	private ApplicationContext context;
 	
-	public List<Utente> getProfilo(){
+	public List<Utente> getUtente(){
 		List<Utente> listClients = new ArrayList<Utente>();
 		
 		for(Entity c : uDao.read().values())
@@ -28,19 +28,23 @@ public class UtenteService {
 		return listClients;
 	}
 
-    public Utente getProfilo(int id){
+    public Utente getUtente(int id){
         return uDao.readOne(id);
     }
+
+	public Utente getUtenteUser(String username){
+        return uDao.readUser(username);
+    }
 	
-	public void addProfilo(Map<String, String> params) {
+	public void addUtente(Map<String, String> params) {
 		uDao.create(context.getBean(Utente.class, params));
 	}
 	
-	public void delProfilo(int id) {
+	public void delUtente(int id) {
 		uDao.delete(id);
 	}
 	
-	public void modProfilo(Map<String, String> params) {
+	public void modUtente(Map<String, String> params) {
 		uDao.update(context.getBean(Utente.class, params));
 	}
 	

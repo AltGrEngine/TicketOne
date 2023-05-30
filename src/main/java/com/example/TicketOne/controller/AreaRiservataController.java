@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class AreaRiservataController {
     
-    @RequestMapping(path = "/modificaCredenziali", method = RequestMethod.GET)
+    @RequestMapping(path = "/modCredenziali", method = RequestMethod.GET)
 	public String modCred(HttpSession session) {
 		return "modificaCredenziali.html";
 	}
 
-    @RequestMapping(path = "/modificaDati", method = RequestMethod.GET)
+    @RequestMapping(path = "/modDati", method = RequestMethod.GET)
 	public String modDati(HttpSession session) {
 		return "modificaDati.html";
 	}

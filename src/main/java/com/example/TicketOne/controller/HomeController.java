@@ -11,19 +11,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.example.TicketOne.models.Utente;
-
 @Controller
 public class HomeController {
 
-	@Autowired
-	private Utente u;
-
     @Autowired
-    private UtentiController proController;
+    private UtentiController utController;
     
     @RequestMapping(path = "/", method = RequestMethod.GET)
 	public String home(HttpSession session) {
+
+		if(session.getAttribute("username")!=null) {
+			session.invalidate();
+		}
+
 		return "index.html";
 	}
 
@@ -35,13 +35,12 @@ public class HomeController {
 		String user = params.get("username");
 		String pw = params.get("password");
 		
-		String check = proController.checkUser(params);
+		String check = utController.checkUser(params);
 		
 		if("OK".equals(check)) {
 			session.setAttribute("username", user);
 			session.setAttribute("password", pw);
 			session.setAttribute("check", check);
-			/*session.setAttribute("errore", "BENVENUTO"); */
 			ris = "redirect:/areaRiservata?username=" + user;
 			
 		} else {
@@ -58,9 +57,7 @@ public class HomeController {
     }
 
     @RequestMapping(path = "/areaRiservata", method = RequestMethod.GET)
-    public String areaRiservata(Model model){
-
-
+    public String areaRiservata(@RequestParam Map<String, String> params){
         return "areaRiservata.html";
     }
 
