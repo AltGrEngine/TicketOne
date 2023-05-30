@@ -1,0 +1,471 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .navbar {
+    overflow: hidden;
+    background-color: #202867;
+    font-family: Arial, Helvetica, sans-serif;
+    width:100%;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  /*css per menu a tendina di eventi e città*/
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+  }
+
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(44, 45, 99);
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content .header {
+    background: #424978;
+    padding: 16px;
+    color: white;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: #ccc;
+    height: 250px;
+  }
+
+  .column a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+
+  .column a:hover {
+    background-color: #ddd;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /*css per icona login*/
+
+  .dropdown2 {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown2 .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+  }
+
+  .navbar a:hover, .dropdown2:hover .dropbtn {
+    background-color: rgb(44, 45, 99);
+  }
+
+  .dropdown2-content {
+    display: none;
+    position: absolute;
+    background-color: #ddd;
+    width: 25%;
+    right:0;
+    margin-right: 7.5%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown2-content .header {
+    background: #424978;
+    padding: 16px;
+    color: #ddd;
+  }
+
+  .dropdown2:hover .dropdown2-content {
+    display: block;
+  }
+
+  .column2 {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: #ddd;
+    height: 250px;
+  }
+
+  .column2 a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+
+  .column2 a:hover {
+    background-color: #ddd;
+  }
+
+  .row2:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /*css per icona carrello*/
+
+  .dropdown3 {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown3 .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+  }
+
+  .navbar a:hover, .dropdown3:hover .dropbtn {
+    background-color: rgb(44, 45, 99);
+  }
+
+  .dropdown3-content {
+    display: none;
+    position: absolute;
+    background-color: #ddd;
+    width: 20%;
+    right:0;
+    margin-right: 6.5%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown3-content .header {
+    background: #424978;
+    padding: 16px;
+    color: #ddd;
+  }
+
+  .dropdown3:hover .dropdown3-content {
+    display: block;
+  }
+
+  .column3 {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: #ddd;
+    height: 100px;
+  }
+
+  .column3 a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+
+  .column3 a:hover {
+    background-color: #ddd;
+  }
+
+  .row3:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /*css per icona mondo*/
+
+  .dropdown4 {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown4 .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+  }
+
+  .navbar a:hover, .dropdown4:hover .dropbtn {
+    background-color: rgb(44, 45, 99);
+  }
+
+  .dropdown4-content {
+    display: none;
+    position: absolute;
+    background-color: #ddd;
+    width: 20%;
+    right:0;
+    margin-right: 13.3%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown4-content .header {
+    background: #424978;
+    padding: 16px;
+    color: #ddd;
+  }
+
+  .dropdown4:hover .dropdown4-content {
+    display: block;
+  }
+
+  .column4 {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: #ddd;
+    height: 100px;
+  }
+
+  .column4 a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+  }
+
+  .column4 a:hover {
+    background-color: #ddd;
+  }
+
+  .row4:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column {
+      height: auto;
+    }
+    .column2 {
+      height: auto;
+    }
+    .column3 {
+      height: auto;
+    }
+    .column4 {
+      height: auto;
+    }
+  }
+
+  /*css per il form del login*/
+  
+  .form {
+    background-color: #fff;
+    display: block;
+    padding: 1rem;
+    max-width: 400px;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .form-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    color: #000;
+  }
+  
+  .input-container {
+    position: relative;
+  }
+  
+  .input-container input, .form button {
+    outline: none;
+    border: 1px solid #e5e7eb;
+    margin: 8px 0;
+  }
+  
+  .input-container input {
+    background-color: #fff;
+    padding: 1rem;
+    padding-right: 3rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    width: 300px;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  
+  .input-container span {
+    display: grid;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    place-content: center;
+  }
+  
+  .input-container span svg {
+    color: #9CA3AF;
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .submit {
+    display: block;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    background-color: #4F46E5;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    width: 100%;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+  }
+  
+  .signup-link {
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-align: center;
+  }
+  
+  .signup-link a {
+    text-decoration: underline;
+  }
+
+  /*css per il form dell'immagine in alto*/
+  
+img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*css per la barra di ricerca e il bottone*/
+
+.modulo-ricerca {
+  display:contents;
+  background-color: #202867;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2px;
+  width: 50%;
+  height:10%;
+}
+
+.modulo-ricerca #search {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #999;
+  float: left;
+  font: 16px Lucida Sans, Trebuchet MS, Tahoma, sans-serif;
+  box-sizing: border-box;
+  height: 42px;
+  padding: 6px;
+  width: 490px;
+  margin-top: 3px;
+  margin-left: 40px;
+}
+
+.modulo-ricerca #search:-moz-placeholder,
+.modulo-ricerca #search:-ms-input-placeholder,
+.modulo-ricerca #search::-webkit-input-placeholder {
+  color: #999;
+  font-weight: normal;
+}
+
+.modulo-ricerca #submit {
+  background-color:  #ffb201;
+  border: 1px solid  #ffb201;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  color: #FFF;
+  cursor: pointer;
+  height: 40px;
+  float: right;
+  font: 15px Arial, Helvetica;
+  padding: 0;
+  text-shadow: 0 1px 0 rgba(0, 0 ,0, .3);
+  width: 70px;
+  margin-left: 10px;
+  margin-top: 4px;
+}
+
+.modulo-ricerca #submit:hover,
+.modulo-ricerca #submit:focus,
+.modulo-ricerca #submit:active {
+  background-color: #eec008;
+}
