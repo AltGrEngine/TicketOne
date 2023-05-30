@@ -201,7 +201,7 @@ document.write('\
             \<div class="input-container">\
               \<input placeholder="Password" type="password" name="password" id="password" style="width: 100%;" required>\
             \</div>\
-                          \<div style="text-align: left">\
+                  \<div style="text-align: left">\
                   \<input type="submit" value="Sign in" class="submit">\
                 \</form>\
               \</div>\

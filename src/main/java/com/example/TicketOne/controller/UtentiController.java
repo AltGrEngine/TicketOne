@@ -9,7 +9,7 @@ import com.example.TicketOne.database.UtentiDAO;
 import com.example.TicketOne.models.Utente;
 
 @Controller
-public class ProfiliController {
+public class UtentiController {
 
     @Autowired
     private UtentiDAO pDao;

@@ -11,11 +11,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.TicketOne.models.Utente;
+
 @Controller
 public class HomeController {
 
+	@Autowired
+	private Utente u;
+
     @Autowired
-    private ProfiliController proController;
+    private UtentiController proController;
     
     @RequestMapping(path = "/", method = RequestMethod.GET)
 	public String home(HttpSession session) {
@@ -54,6 +59,8 @@ public class HomeController {
 
     @RequestMapping(path = "/areaRiservata", method = RequestMethod.GET)
     public String areaRiservata(Model model){
+
+
         return "areaRiservata.html";
     }
 

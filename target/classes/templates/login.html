@@ -6,26 +6,36 @@
   <link rel="stylesheet" href="css/signInUp.css">
   <link rel="stylesheet" href="css/footerstyle.css">
   <script src="js/footer.js" defer></script>
+
+  <script>
+    function alertLoginError() {
+      var erroreLabel = document.getElementById("errore");
+
+      if(erroreLabel.innerHTML != ""){
+        alert(erroreLabel.innerHTML);
+      }
+    }
+  </script>
 </head>
 
-<body class="tutto">
+<body class="tutto" onload="alertLoginError()">
   <script src="js/intestazione.js"></script>
   <div class="contenitore">
-  <form action="areaRiservata.html">
+  <form action="/loginUtente">
     <p class="contenitore-title">Accedi al tuo account</p>
      <div class="input-cont" style="text-align: center;">
-       <input type="text" placeholder="Username">
+       <input type="text" placeholder="Username" name="username" id="username">
        <span>
        </span>
    </div>
    <div class="input-cont" style="text-align: center;">
-       <input type="password" placeholder="Password">
+       <input type="password" placeholder="Password" name="password" id="password">
      </div>
       <button type="submit" style="margin-left: 42.5%; margin-right: 42.5%"  class="submi">
      Sign in
    </button>
 </form>
-<form action="registrazione.html">
+<form action="/registrazione">
 <p class="signin-link">
   Non hai un account?
   <input type="submit" value="Registrati" name="registrati" id="registrati">

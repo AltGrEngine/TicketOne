@@ -2,15 +2,104 @@
 <html>
 
 <head>
+  <title>Area riservata</title>
   <link rel="stylesheet" href="css/stili.css">
   <link rel="stylesheet" href="css/footerstyle.css">
-  <script src="js/footer.js" defer></script>
 </head>
 
 <body>
   <script src="js/intestazione.js"></script>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  <a href="#top" style="text-decoration: none;"><center>Back to top</center></a>
+  <h3 style="margin-left: 15.5%;">My TicketOne, benvenuto nella tua area riservata!</h3>
+  <h4 style="margin-left: 15.5%;">Il tuo ultimo ordine</h4>
+  <div style="margin-left: 15.5%;text-align:center; width:70%; height:30%;border-style: solid; border-width: 1px;">
+
+    <p style=" float: left; margin-left: 3%;">Ordine <strong name="ordine" id="ordine">123456</strong> da <strong
+        name="data" id="data">21/05/2020</strong>
+    </p>
+    <p style="float: right; margin-right: 3%;">importo totale: &#x20AC; <strong name="prezzo" id="prezzo">56,95</strong>
+    </p>
+
+    <hr style="width:97%;">
+
+    <p name="nomeEvento" id="nomeEvento" style="float: left; margin-left: 3%;">Avril Lavigne</p>
+    <p style="float: right; margin-right: 3%;">Stampa@casa</p>
+
+    <br>
+    <br>
+    <br>
+
+    <p name="dataEvento" id="dataEvento" style="float: left; margin-left: 3%;">12/03/2021</p>
+    <button type="submit" style="float: right; width:25%; border-radius: 2px; margin-right: 2.5%; cursor: pointer;"
+      class="submit">Scarica
+      stampa@casa</button>
+    <br>
+    <br>
+    <br>
+
+    <form action="/evento">
+      <input type="submit" value="Mostra dettagli" name="evento" id="evento"
+        style="color: rgb(19, 157, 244); float: right; margin-right: 2.5%; border: none; background-color: white; text-decoration:underline; cursor: pointer;">
+    </form>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+  <table style="margin-left: 15.5%; width:70%;">
+    <tr>
+      <th style="width:40%; text-align: left;">Dati personali e consensi</th>
+      <th style="width:40%; text-align: left;">Le tue Newsletter</th>
+      <th style="width:40%; text-align: left;">Cambio Credenziali</th>
+    </tr>
+    <tr>
+      <td></td>
+    </tr>
+    <tr>
+      <td th:text="${session.utente.nome}"></td>
+      <td>Dicci cosa ti piace e ti invieremo</td>
+      <td>Se vuoi cambiare username e/o password</td>
+    </tr>
+    <tr>
+      <td>Corso Buenos Aires 47</td>
+      <td>regolarmente il meglio di eventi e</td>
+      <td>clicca il tasto qui sotto.</td>
+    </tr>
+    <tr>
+      <td th:text="${session.utente.luogo_nascita}"></td>
+      <td>dei tuoi artisti preferiti.</td>
+      <td>
+        <form action="/modificaCredenziali">
+          <input type="submit" value="Modifica credenziali" name="modCred" id="modCred"
+            style="border: none; background-color: white; color: rgb(19, 157, 244); text-decoration:underline; cursor: pointer;">
+        </form>
+      </td>
+    </tr>
+    <tr>
+      <td>Italia</td>
+    </tr>
+    <tr>
+      <td th:text="${session.utente.email}">E-mail: example@example.it</td>
+    </tr>
+    <tr>
+      <td th:text="${session.utente.data_nascita}">Data di nascita: gg/mm/yyyy</td>
+    </tr>
+    <tr>
+      <td>
+        <form action="/modificaDati">
+          <input type="submit" value="Modifica dati" name="modDati" id="modDati"
+            style="border: none; background-color: white; color: rgb(19, 157, 244); text-decoration:underline; cursor: pointer;">
+        </form>
+      </td>
+    </tr>
+  </table>
+
+  <br><br><br><br><br><br>
+  <a href="#top" style="text-decoration: none;">
+    <center>Back to top</center>
+  </a>
   <script src="js/footer.js"></script>
 </body>
 
