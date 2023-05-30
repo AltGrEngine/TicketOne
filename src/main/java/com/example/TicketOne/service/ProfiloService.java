@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.TicketOne.database.ProfiliDAO;
 import com.example.TicketOne.models.Entity;
-import com.example.TicketOne.models.Profilo;
+import com.example.TicketOne.models.Utente;
 
 public class ProfiloService {
     
@@ -19,21 +19,21 @@ public class ProfiloService {
 	@Autowired
 	private ApplicationContext context;
 	
-	public List<Profilo> getProfilo(){
-		List<Profilo> listClients = new ArrayList<Profilo>();
+	public List<Utente> getProfilo(){
+		List<Utente> listClients = new ArrayList<Utente>();
 		
 		for(Entity c : pDao.read().values())
-			listClients.add((Profilo) c);
+			listClients.add((Utente) c);
 		
 		return listClients;
 	}
 
-    public Profilo getProfilo(int id){
+    public Utente getProfilo(int id){
         return pDao.readOne(id);
     }
 	
 	public void addProfilo(Map<String, String> params) {
-		pDao.create(context.getBean(Profilo.class, params));
+		pDao.create(context.getBean(Utente.class, params));
 	}
 	
 	public void delProfilo(int id) {
@@ -41,7 +41,7 @@ public class ProfiloService {
 	}
 	
 	public void modProfilo(Map<String, String> params) {
-		pDao.update(context.getBean(Profilo.class, params));
+		pDao.update(context.getBean(Utente.class, params));
 	}
 	
 

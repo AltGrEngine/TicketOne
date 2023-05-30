@@ -1,6 +1,7 @@
 package com.example.TicketOne.database;
 
 import java.util.Map;
+import java.util.Map.Entry;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,8 +30,10 @@ public class ProfiliDAO implements IDAO{
 
     public Utente readUser(String username){
         String query = "select * from utenti where username = ?";
-        Utente pNelDao = context.getBean(Utente.class, db.executeQuery(query, username));
-        return pNelDao;
+        for (Entry<Integer, Map<String, String>> entry : db.executeQuery(query, username).entrySet()) {
+            return context.getBean(Utente.class, entry.getValue());
+        }
+        return null;
     }
 
     @Override

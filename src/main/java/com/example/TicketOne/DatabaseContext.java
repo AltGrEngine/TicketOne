@@ -48,26 +48,5 @@ public class DatabaseContext {
 	public BigliettiDAO bDao() {
 		return new BigliettiDAO();
 	}
-
-	/* 
-	@Bean
-	public ClientiDAO clientiDao() {
-		return new ClientiDAO();
-	}
-	
-	@Bean
-	public ContiDAO contiDao() {
-		return new ContiDAO();
-	}
-	
-	@Bean
-	public TransazioniDAO tranDao() {
-		return new TransazioniDAO();
-	}
-	
-	@Bean
-	public DipendentiDAO dipDao() {
-		return new DipendentiDAO();
-	} */
 	
 }

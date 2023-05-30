@@ -42,23 +42,5 @@ public class Context {
 	public BigliettiService BigliettiService() {
 		return new BigliettiService();
 	}
-	/* @Bean
-	public ClientiService cliService() {
-		return new ClientiService();
-	}
 	
-	@Bean
-	public ContiService conService() {
-		return new ContiService();
-	}
-	
-	@Bean
-	public TransazioniService transService() {
-		return new TransazioniService();
-	}
-	
-	@Bean
-	public DipendentiService dipService() {
-		return new DipendentiService();
-	} */
 }

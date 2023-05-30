@@ -7,42 +7,15 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 
-import com.example.TicketOne.models.Profilo;
+import com.example.TicketOne.models.Utente;
 
 @Configuration
 public class ModelContext {
 
 	@Bean
 	@Scope("prototype")
-	public Profilo newProfilo(Map<String, String> params){
-		return (Profilo) new Profilo().fromMap(params);
-	}
-
-
-	/* @Bean
-	@Scope("prototype")
-	public Cliente newCliente(Map<String, String> params) {
-		return (Cliente) new Cliente().fromMap(params);
-	}
-	
-	@Bean
-	@Scope("prototype")
-	public Conto newConto(Map<String, String> params) {
-		
-		return (Conto) new Conto().fromMap(params);
-	}
-	
-	@Bean
-	@Scope("prototype")
-	public Transazione newTransazione(Map<String, String> params) {
-		return (Transazione) new Transazione().fromMap(params);
-	}
-	
-	@Bean
-	@Scope("prototype")
-	public Dipendente newDip(Map<String, String> params) {
-		return (Dipendente) new Dipendente().fromMap(params);
-	} */
-	
-	
+	public Utente newProfilo(Map<String, String> params){
+		Utente u = (Utente) new Utente().fromMap(params);
+		return u;
+	}	
 }

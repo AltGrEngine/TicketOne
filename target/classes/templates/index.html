@@ -12,10 +12,21 @@
     <script src="js/jsTeatro.js" defer></script>
     <script src="js/jsConcerti.js" defer></script>
     <script src="js/footer.js" defer></script>
+
+    <script>
+      function alertLoginError() {
+        var erroreLabel = document.getElementById("errore");
+
+        if(erroreLabel.innerHTML != ""){
+          alert(erroreLabel.innerHTML);
+        }
+      }
+    </script>
 </head>
 
-<body>
+<body onload="alertLoginError()">
   <script src="js/intestazione.js"></script>
+  <span th:text="${session.errore}" name="errore" id="errore" hidden></span>
   <br>
   <br>
   <br>

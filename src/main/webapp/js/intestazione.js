@@ -86,16 +86,15 @@ document.write('\
         \</div>\
         \<div class="row2">\
           \<div class="form">\
-          \<form action="/loginUtente">\
+          \<form action="/loginUtente" method="post">\
             \<p class="form-title">Sign in to your account</p>\
             \<div class="input-container">\
               \<input placeholder="Username" type="text" name="username" id="username" style="width: 100%;" required>\
             \</div>\
             \<div class="input-container">\
-              \<input placeholder="Password" type="password" name="pass" id="pass" style="width: 100%;" required>\
+              \<input placeholder="Password" type="password" name="password" id="pass" style="width: 100%;" required>\
             \</div>\
-            \<p name="errore" id="errore"></p>\
-                          \<div style="text-align: left">\
+                \<div style="text-align: left">\
                   \<input type="submit" value="Sign in" class="submit">\
                 \</form>\
               \</div>\
@@ -125,3 +124,4 @@ document.write('\
     \</div>\
   \</div>\
 ');
+
