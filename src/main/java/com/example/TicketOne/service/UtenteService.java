@@ -7,14 +7,14 @@ import java.util.Map;
 import org.springframework.context.ApplicationContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.example.TicketOne.database.ProfiliDAO;
+import com.example.TicketOne.database.UtentiDAO;
 import com.example.TicketOne.models.Entity;
 import com.example.TicketOne.models.Utente;
 
-public class ProfiloService {
+public class UtenteService {
     
     @Autowired
-	private ProfiliDAO pDao;
+	private UtentiDAO uDao;
 	
 	@Autowired
 	private ApplicationContext context;
@@ -22,26 +22,26 @@ public class ProfiloService {
 	public List<Utente> getProfilo(){
 		List<Utente> listClients = new ArrayList<Utente>();
 		
-		for(Entity c : pDao.read().values())
+		for(Entity c : uDao.read().values())
 			listClients.add((Utente) c);
 		
 		return listClients;
 	}
 
     public Utente getProfilo(int id){
-        return pDao.readOne(id);
+        return uDao.readOne(id);
     }
 	
 	public void addProfilo(Map<String, String> params) {
-		pDao.create(context.getBean(Utente.class, params));
+		uDao.create(context.getBean(Utente.class, params));
 	}
 	
 	public void delProfilo(int id) {
-		pDao.delete(id);
+		uDao.delete(id);
 	}
 	
 	public void modProfilo(Map<String, String> params) {
-		pDao.update(context.getBean(Utente.class, params));
+		uDao.update(context.getBean(Utente.class, params));
 	}
 	
 

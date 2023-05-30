@@ -9,7 +9,7 @@ import com.example.TicketOne.database.EventoDAO;
 import com.example.TicketOne.database.GenereDAO;
 import com.example.TicketOne.database.LocalitaDAO;
 import com.example.TicketOne.database.LuoghiDAO;
-import com.example.TicketOne.database.ProfiliDAO;
+import com.example.TicketOne.database.UtentiDAO;
 
 @Configuration
 public class DatabaseContext {
@@ -20,8 +20,8 @@ public class DatabaseContext {
 	}
 
 	@Bean
-	public ProfiliDAO profiliDao() {
-		return new ProfiliDAO();
+	public UtentiDAO profiliDao() {
+		return new UtentiDAO();
 	}
 
 	@Bean

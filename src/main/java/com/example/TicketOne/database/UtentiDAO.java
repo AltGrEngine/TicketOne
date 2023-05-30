@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.example.TicketOne.models.Entity;
 import com.example.TicketOne.models.Utente;
 
-public class ProfiliDAO implements IDAO{
+public class UtentiDAO implements IDAO{
 
     @Autowired
     private Database db;

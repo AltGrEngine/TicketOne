@@ -8,14 +8,14 @@ import com.example.TicketOne.service.EventoService;
 import com.example.TicketOne.service.GenereService;
 import com.example.TicketOne.service.LocalitaService;
 import com.example.TicketOne.service.LuogoService;
-import com.example.TicketOne.service.ProfiloService;
+import com.example.TicketOne.service.UtenteService;
 
 @Configuration
 public class Context {
 
 	@Bean
-	public ProfiloService proService(){
-		return new ProfiloService();
+	public UtenteService proService(){
+		return new UtenteService();
 	}
 
 	@Bean

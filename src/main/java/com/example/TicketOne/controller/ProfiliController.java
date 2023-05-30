@@ -5,14 +5,14 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import com.example.TicketOne.database.ProfiliDAO;
+import com.example.TicketOne.database.UtentiDAO;
 import com.example.TicketOne.models.Utente;
 
 @Controller
 public class ProfiliController {
 
     @Autowired
-    private ProfiliDAO pDao;
+    private UtentiDAO pDao;
 
     public String checkUser(Map<String, String> params) {
         String ris = "KO";
