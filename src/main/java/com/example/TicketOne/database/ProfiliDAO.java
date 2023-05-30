@@ -20,7 +20,14 @@ public class ProfiliDAO implements IDAO{
     @Override
     public boolean create(Entity e) {
         String query = "insert into utenti(nome,cognome,data_nascita,email,luogo_nascita,username,password) values(?,?,?,?,?,?,?)";
-        return db.executeUpdate(query, ((Utente) e).getNome(), ((Utente) e).getCognome(), ((Utente) e).getEmail(), ((Utente) e).getDatanascita()+"", ((Utente) e).getUsername(), ((Utente) e).getPassword());
+        return db.executeUpdate(query, 
+        ((Utente) e).getNome(), 
+        ((Utente) e).getCognome(), 
+        ((Utente) e).getData_nascita()+"", 
+        ((Utente) e).getEmail(), 
+        ((Utente) e).getLuogo_nascita(), 
+        ((Utente) e).getUsername(), 
+        ((Utente) e).getPassword());
     }
 
     public Utente readOne(int id){

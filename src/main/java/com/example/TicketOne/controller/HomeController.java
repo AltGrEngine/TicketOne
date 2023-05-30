@@ -36,7 +36,7 @@ public class HomeController {
 			session.setAttribute("username", user);
 			session.setAttribute("password", pw);
 			session.setAttribute("check", check);
-			session.setAttribute("errore", "BENVENUTO");
+			/*session.setAttribute("errore", "BENVENUTO"); */
 			ris = "redirect:/areaRiservata?username=" + user;
 			
 		} else {
