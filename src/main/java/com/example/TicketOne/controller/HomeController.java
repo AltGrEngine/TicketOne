@@ -1,8 +1,6 @@
-package com.ticketone.TicketOne.controller;
+package com.example.TicketOne.controller;
 
 import java.util.Map;
-
-import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,12 +16,7 @@ public class HomeController {
     private ProfiliController proController;
     
     @RequestMapping(path = "/", method = RequestMethod.GET)
-	public String home(HttpSession session) {
-		
-/* 		if(session.getAttribute("username")!=null) {
-			session.invalidate();
-		} */
-		
+	public String home() {
 		return "index.html";
 	}
 
@@ -33,13 +26,13 @@ public class HomeController {
 		String ris = "Username sbagliato";
 		
 		String user = params.get("username");
-		String pw = params.get("pass");
+		String pw = params.get("password");
 		
 		String check = proController.checkUser(params);
 		
 		if("OK".equals(check)) {
 			model.addAttribute("username", user);
-			model.addAttribute("pass", pw);
+			model.addAttribute("password", pw);
 			model.addAttribute("check", check);
 			ris = "redirect:/areaRiservata?username=" + user;
 			

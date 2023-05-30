@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import com.example.TicketOne.database.ProfiliDAO;
-import com.example.TicketOne.models.Profilo;
+import com.example.TicketOne.models.Utente;
 
 @Controller
 public class ProfiliController {
@@ -17,13 +17,13 @@ public class ProfiliController {
     public String checkUser(Map<String, String> params) {
         String ris = "KO";
 		String username = params.get("username");
-		String password = params.get("pass");
-        Profilo p = pDao.readUser(username);
+		String password = params.get("password");
+        Utente p = pDao.readUser(username);
         if (p != null) {
             
             ris = "Pw sbagliata";
 
-            if(p.getPass().equals(password)) {
+            if(p.getPassword().equals(password)) {
 				
                 ris = "OK";
             }

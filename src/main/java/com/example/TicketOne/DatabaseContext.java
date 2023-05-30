@@ -10,14 +10,13 @@ import com.example.TicketOne.database.GenereDAO;
 import com.example.TicketOne.database.LocalitaDAO;
 import com.example.TicketOne.database.LuoghiDAO;
 import com.example.TicketOne.database.ProfiliDAO;
-import com.example.TicketOne.database.SpettacoliDAO;
 
 @Configuration
 public class DatabaseContext {
 	
 	@Bean
 	public Database db() {
-		return new Database("Progettone");
+		return new Database("ticketone");
 	}
 
 	@Bean
@@ -50,10 +49,6 @@ public class DatabaseContext {
 		return new BigliettiDAO();
 	}
 
-	@Bean
-	public SpettacoliDAO sDao() {
-		return new SpettacoliDAO();
-	}
 	/* 
 	@Bean
 	public ClientiDAO clientiDao() {

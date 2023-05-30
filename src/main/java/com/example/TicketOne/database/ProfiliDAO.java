@@ -6,7 +6,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.TicketOne.models.Entity;
-import com.example.TicketOne.models.Profilo;
+import com.example.TicketOne.models.Utente;
 
 public class ProfiliDAO implements IDAO{
 
@@ -18,18 +18,18 @@ public class ProfiliDAO implements IDAO{
 
     @Override
     public boolean create(Entity e) {
-        String query = "insert into profili(nome,cognome,email,datanascita,username,pass) values(?,?,?,?,?,?)";
-        return db.executeUpdate(query, ((Profilo) e).getNome(), ((Profilo) e).getCognome(), ((Profilo) e).getEmail(), ((Profilo) e).getDatanascita()+"", ((Profilo) e).getUsername(), ((Profilo) e).getPass());
+        String query = "insert into utenti(nome,cognome,data_nascita,email,luogo_nascita,username,password) values(?,?,?,?,?,?,?)";
+        return db.executeUpdate(query, ((Utente) e).getNome(), ((Utente) e).getCognome(), ((Utente) e).getEmail(), ((Utente) e).getDatanascita()+"", ((Utente) e).getUsername(), ((Utente) e).getPassword());
     }
 
-    public Profilo readOne(int id){
-        String query = "select * from profili where id = ?";
-        return context.getBean(Profilo.class, db.executeQuery(query, id+"").get(id));
+    public Utente readOne(int id){
+        String query = "select * from utenti where id = ?";
+        return context.getBean(Utente.class, db.executeQuery(query, id+"").get(id));
     }
 
-    public Profilo readUser(String username){
-        String query = "select * from profili where username = ?";
-        Profilo pNelDao = context.getBean(Profilo.class, db.executeQuery(query, username));
+    public Utente readUser(String username){
+        String query = "select * from utenti where username = ?";
+        Utente pNelDao = context.getBean(Utente.class, db.executeQuery(query, username));
         return pNelDao;
     }
 

@@ -2,7 +2,7 @@ document.write('\
 \<img src="foto/fotoIntestazione/headerTickeOne.jpg" style="display: block; width: 100%;">\
   \<div class="navbar" style="padding-left: 15%; padding-right: 15%;">\
     \<div class="dropdown">\
-      \<form action="index.html">\
+      \<form action="/">\
         \<button type="submit" style="border:none; background-color: transparent; cursor: pointer;"><img\
            \ src="foto/fotoIntestazione/logo.jpeg" alt=""></button>\
       \</form>\

@@ -2,14 +2,14 @@ package com.example.TicketOne.models;
 
 import java.sql.Date;
 
-public class Profilo extends Entity{
+public class Utente extends Entity{
     
     private String nome;
     private String cognome;
     private String email;
     private Date datanascita;
     private String username;
-    private String pass;
+    private String password;
     
     public String getNome() {
         return nome;
@@ -41,12 +41,13 @@ public class Profilo extends Entity{
     public void setUsername(String username) {
         this.username = username;
     }
-    public String getPass() {
-        return pass;
+    public String getPassword() {
+        return password;
     }
-    public void setPass(String pass) {
-        this.pass = pass;
+    public void setPassword(String password) {
+        this.password = password;
     }
+    
 
     
 }
