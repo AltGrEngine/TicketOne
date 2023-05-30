@@ -1,14 +1,14 @@
-package com.ticketone.progettoTicketOne;
+package com.example.TicketOne;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.ticketone.progettoTicketOne.service.BigliettiService;
-import com.ticketone.progettoTicketOne.service.EventoService;
-import com.ticketone.progettoTicketOne.service.GenereService;
-import com.ticketone.progettoTicketOne.service.LocalitaService;
-import com.ticketone.progettoTicketOne.service.LuogoService;
-import com.ticketone.progettoTicketOne.service.ProfiloService;
+import com.example.TicketOne.service.BigliettiService;
+import com.example.TicketOne.service.EventoService;
+import com.example.TicketOne.service.GenereService;
+import com.example.TicketOne.service.LocalitaService;
+import com.example.TicketOne.service.LuogoService;
+import com.example.TicketOne.service.ProfiloService;
 
 @Configuration
 public class Context {

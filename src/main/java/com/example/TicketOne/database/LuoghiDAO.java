@@ -1,4 +1,4 @@
-package com.ticketone.progettoTicketOne.database;
+package com.example.TicketOne.database;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,8 +7,8 @@ import java.util.Map.Entry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 
-import com.ticketone.progettoTicketOne.models.Entity;
-import com.ticketone.progettoTicketOne.models.Luogo;
+import com.example.TicketOne.models.Entity;
+import com.example.TicketOne.models.Luogo;
 
 public class LuoghiDAO implements IDAO {
 

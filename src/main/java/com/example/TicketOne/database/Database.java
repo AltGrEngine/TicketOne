@@ -1,4 +1,4 @@
-package com.ticketone.progettoTicketOne.database;
+package com.example.TicketOne.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

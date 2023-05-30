@@ -1,4 +1,4 @@
-package com.ticketone.progettoTicketOne;
+package com.example.TicketOne;
 
 import java.util.Map;
 
@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 
-import com.ticketone.progettoTicketOne.models.Profilo;
+import com.example.TicketOne.models.Profilo;
 
 @Configuration
 public class ModelContext {

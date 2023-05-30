@@ -1,8 +1,8 @@
-package com.ticketone.progettoTicketOne.database;
+package com.example.TicketOne.database;
 
 import java.util.Map;
 
-import com.ticketone.progettoTicketOne.models.Entity;
+import com.example.TicketOne.models.Entity;
 
 public interface IDAO {
 	

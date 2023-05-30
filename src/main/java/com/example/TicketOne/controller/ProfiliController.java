@@ -1,12 +1,12 @@
-package com.ticketone.progettoTicketOne.controller;
+package com.example.TicketOne.controller;
 
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
-import com.ticketone.progettoTicketOne.database.ProfiliDAO;
-import com.ticketone.progettoTicketOne.models.Profilo;
+import com.example.TicketOne.database.ProfiliDAO;
+import com.example.TicketOne.models.Profilo;
 
 @Controller
 public class ProfiliController {

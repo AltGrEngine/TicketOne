@@ -1,16 +1,16 @@
-package com.ticketone.progettoTicketOne;
+package com.example.TicketOne;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.ticketone.progettoTicketOne.database.BigliettiDAO;
-import com.ticketone.progettoTicketOne.database.Database;
-import com.ticketone.progettoTicketOne.database.EventoDAO;
-import com.ticketone.progettoTicketOne.database.GenereDAO;
-import com.ticketone.progettoTicketOne.database.LocalitaDAO;
-import com.ticketone.progettoTicketOne.database.LuoghiDAO;
-import com.ticketone.progettoTicketOne.database.ProfiliDAO;
-import com.ticketone.progettoTicketOne.database.SpettacoliDAO;
+import com.example.TicketOne.database.BigliettiDAO;
+import com.example.TicketOne.database.Database;
+import com.example.TicketOne.database.EventoDAO;
+import com.example.TicketOne.database.GenereDAO;
+import com.example.TicketOne.database.LocalitaDAO;
+import com.example.TicketOne.database.LuoghiDAO;
+import com.example.TicketOne.database.ProfiliDAO;
+import com.example.TicketOne.database.SpettacoliDAO;
 
 @Configuration
 public class DatabaseContext {

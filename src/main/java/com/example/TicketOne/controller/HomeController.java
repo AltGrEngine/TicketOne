@@ -1,4 +1,4 @@
-package com.ticketone.progettoTicketOne.controller;
+package com.ticketone.TicketOne.controller;
 
 import java.util.Map;
 

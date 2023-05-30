@@ -1,13 +1,13 @@
-package com.ticketone.progettoTicketOne.service;
+package com.example.TicketOne.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.ticketone.progettoTicketOne.database.LuoghiDAO;
-import com.ticketone.progettoTicketOne.models.Entity;
-import com.ticketone.progettoTicketOne.models.Luogo;
+import com.example.TicketOne.database.LuoghiDAO;
+import com.example.TicketOne.models.Entity;
+import com.example.TicketOne.models.Luogo;
 
 public class LuogoService {
 

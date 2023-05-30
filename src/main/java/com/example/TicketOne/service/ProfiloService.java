@@ -1,4 +1,4 @@
-package com.ticketone.progettoTicketOne.service;
+package com.example.TicketOne.service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,9 +7,9 @@ import java.util.Map;
 import org.springframework.context.ApplicationContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.ticketone.progettoTicketOne.database.ProfiliDAO;
-import com.ticketone.progettoTicketOne.models.Entity;
-import com.ticketone.progettoTicketOne.models.Profilo;
+import com.example.TicketOne.database.ProfiliDAO;
+import com.example.TicketOne.models.Entity;
+import com.example.TicketOne.models.Profilo;
 
 public class ProfiloService {
     

@@ -1,4 +1,4 @@
-package com.ticketone.progettoTicketOne.models;
+package com.example.TicketOne.models;
 
 public class Genere extends Entity {
     

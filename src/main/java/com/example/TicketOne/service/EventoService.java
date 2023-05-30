@@ -1,13 +1,13 @@
-package com.ticketone.progettoTicketOne.service;
+package com.example.TicketOne.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.ticketone.progettoTicketOne.database.EventoDAO;
-import com.ticketone.progettoTicketOne.models.Entity;
-import com.ticketone.progettoTicketOne.models.Evento;
+import com.example.TicketOne.database.EventoDAO;
+import com.example.TicketOne.models.Entity;
+import com.example.TicketOne.models.Evento;
 
 public class EventoService {
 
