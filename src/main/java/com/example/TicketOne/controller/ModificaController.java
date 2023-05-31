@@ -19,7 +19,7 @@ public class ModificaController {
     @RequestMapping(path = "/modificaDati", method = RequestMethod.GET)
     public String modUtente(@RequestParam Map<String, String> params){
         uService.modUtente(params);
-        return "redirect:/areaRiservata?username=" + params.get("username");
+        return "redirect:/";
     }
 
 }

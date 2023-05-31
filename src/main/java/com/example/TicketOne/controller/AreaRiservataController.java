@@ -8,11 +8,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class AreaRiservataController {
-    
-    @RequestMapping(path = "/modCredenziali", method = RequestMethod.GET)
-	public String modCred(HttpSession session) {
-		return "modificaCredenziali.html";
-	}
 
     @RequestMapping(path = "/modDati", method = RequestMethod.GET)
 	public String modDati(HttpSession session) {

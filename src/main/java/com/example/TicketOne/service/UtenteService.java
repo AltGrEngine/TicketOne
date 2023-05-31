@@ -47,6 +47,8 @@ public class UtenteService {
 	public void modUtente(Map<String, String> params) {
 		uDao.update(context.getBean(Utente.class, params));
 	}
+
+	
 	
 
 }

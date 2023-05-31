@@ -58,7 +58,8 @@
       <td></td>
     </tr>
     <tr>
-      <td>NOME</td>
+      <td th:text="${session.utente.nome}" name="nome"></td>
+      <td th:text="${session.utente.cognome}" name="cognome"></td>
       <td>Dicci cosa ti piace e ti invieremo</td>
       <td>Se vuoi cambiare username e/o password</td>
     </tr>
@@ -68,7 +69,7 @@
       <td>clicca il tasto qui sotto.</td>
     </tr>
     <tr>
-      <td>LUOGO NASCITA</td>
+      <td th:text="'Luogo di nascita: ' + ${session.utente.luogoNascita}" name="luogonascita">luogo</td>
       <td>dei tuoi artisti preferiti.</td>
       <td>
         <form action="/modCredenziali">
@@ -86,14 +87,20 @@
       <td>Italia</td>
     </tr>
     <tr>
-      <td>E-mail: example@example.it</td>
+      <td th:text="'Email: ' + ${session.utente.email}" name="email"></td>
     </tr>
     <tr>
-      <td>Data di nascita: gg/mm/yyyy</td>
+      <td th:text="'Data di nascita: ' + ${session.utente.dataNascita}" name="datanascita"></td>
+    </tr>
+    <tr>
+      <td th:text="${session.utente.username}" name="username"></td>
+    </tr>
+    <tr>
+      <td th:text="${session.utente.password}" name="password"></td>
     </tr>
     <tr>
       <td>
-        <form action="/modDati">
+        <form action="/modDati" method="get">
           <input type="submit" value="Modifica dati" name="modDati" id="modDati"
             style="border: none; 
                    background-color: white; 
