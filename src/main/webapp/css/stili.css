@@ -105,7 +105,6 @@ body {
   color: white;
   padding: 14px 16px;
   background-color: inherit;
-  font: inherit;
   margin: 0;
 }
 
@@ -161,7 +160,6 @@ body {
   color: white;
   padding: 14px 16px;
   background-color: inherit;
-  font: inherit;
   margin: 0;
 }
 
@@ -217,7 +215,6 @@ body {
   color: white;
   padding: 14px 16px;
   background-color: inherit;
-  font: inherit;
   margin: 0;
 }
 
@@ -351,6 +348,30 @@ body {
   text-transform: uppercase;
 }
 
+.tastoAcquista {
+  display: block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background-color: #4F46E5;
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  background-color: rgba(74,74,243,0);
+  transition: .5s;
+}
+
+.tastoAcquista:hover{
+  transition: .5s;
+  color: #000;
+  background-color: rgba(255,178,1,1);
+}
+
 .signup-link {
   color: #6B7280;
   font-size: 0.875rem;
@@ -406,7 +427,7 @@ img {
 }
 
 .modulo-ricerca #submit {
-  background-color: #ffb201;
+  background-color: rgb(255, 178, 1);
   border: 1px solid #ffb201;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -427,4 +448,28 @@ img {
 .modulo-ricerca #submit:focus,
 .modulo-ricerca #submit:active {
   background-color: #eec008;
+}
+
+select {
+  background-color: #fff;
+  width: 30%;
+  border: 1px solid #e5e7eb;
+  font-size: 0.875rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  padding: 10px;
+}
+
+.eventiCitta {
+  border: none;
+  background-color: white;
+  width: 130%;
+  padding: 10%;
+  cursor: pointer;
+  font-size: 100%;
+  text-align: left;
+}
+
+.eventiCitta:hover {
+  background-color: #ddd;
 }

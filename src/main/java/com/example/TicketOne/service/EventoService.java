@@ -26,4 +26,13 @@ public class EventoService {
     public Evento getEvento(int id){
         return eDao.readOne(id);
     }
+
+    public List<Evento> getEventoByTitolo(){
+		List<Evento> listEventi = new ArrayList<Evento>();
+		
+		for(Entity c : eDao.readByTitolo().values())
+			listEventi.add((Evento) c);
+		
+		return listEventi;
+	}
 }

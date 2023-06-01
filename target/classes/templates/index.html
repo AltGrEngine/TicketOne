@@ -62,24 +62,29 @@
   <br>
   <br>
   <div>
-  <form action="index.html">
-    <div class="contenitorrrr">
-      <h3>Newsletter TicketOne</h3>
-      <p>Iscriviti subito per non perdere i tuoi eventi preferiti!</p>
-    </div>
-  
-    <div class="contenitorrrr" style="background-color:white">
-      <input type="text" placeholder="Email address" name="mail" required style="width: 50%; padding: 0.5%; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;">
-      <br>
-      <label>
-        <input type="checkbox" checked="checked" name="subscribe" required> *Acconsento a ricevere la Newsletter, presa visione delle <a href ="https://www.ticketone.it/campaign/condizioni-servizio-newsletter?affiliate=${affiliateCode}">Condizioni di servizio</a> e <a href="https://www.ticketone.it/help/data-protection/">dell'informativa sul Trattamento dei Dati</a>
-      </label>
-    </div>
-  
-    <div class="contenitorrrr">
-      <input type="submit" value="Subscribe" style="border-radius: 25px; background-color: #ffb201; color: white; border: none; width: 50%; padding: 0.5%; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;">
-    </div>
-  </form>
+    <form action="index.html">
+      <div class="contenitorrrr">
+        <h3>Newsletter TicketOne</h3>
+        <p>Iscriviti subito per non perdere i tuoi eventi preferiti!</p>
+      </div>
+
+      <div class="contenitorrrr" style="background-color:white">
+        <input type="text" placeholder="Email address" name="mail" required
+          style="width: 50%; padding: 0.5%; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;">
+        <br>
+        <label>
+          <input type="checkbox" checked="checked" name="subscribe" required> *Acconsento a ricevere la Newsletter,
+          presa visione delle 
+          <a href="https://www.ticketone.it/campaign/condizioni-servizio-newsletter?affiliate=${affiliateCode}">Condizioni di servizio</a> e <a href="https://www.ticketone.it/help/data-protection/">dell'informativa sul Trattamento
+            dei Dati</a>
+        </label>
+      </div>
+
+      <div class="contenitorrrr">
+        <input type="submit" value="Subscribe"
+          style="cursor:pointer;border-radius: 25px; background-color: #ffb201; color: white; border: none; width: 50%; padding: 0.5%; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;">
+      </div>
+    </form>
   <br>
   <br>
   <br>
@@ -93,22 +98,44 @@
     </div>
     <div class="contenitorrrr" style="background-color:white">
 
-      <select name="citta" id="citta" style="width:30%;">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
+      <select name="lista_citta" id="lista_citta" placeholder="lista citta" required="">
+        <option value="" selected disabled hidden>Citt&#224; </option>
+        <option value="Milano">Milano</option>
+        <option value="Torino">Torino</option>
+        <option value="Genova">Genova</option>
+        <option value="Roma">Roma</option>
+        <option value="Firenze">Firenze</option>
+        <option value="Napoli">Napoli</option>
+        <option value="Palermo">Palermo</option>
+        <option value="Bologna">Bologna</option>
+        <option value="Venezia">Venezia</option>
+        <option value="Bari">Bari</option>
+        <option value="Cagliari">Cagliari</option>
       </select>
 
-      <select name="categoria" id="categoria" style="width:30%;">
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
+      <select name="lista_eventi" id="lista_eventi" placeholder="lista eventi" required="">
+        <option value="" selected disabled hidden>Eventi</option>
+        <optgroup label="Concerti">
+          <option value="pop&rock">Pop&Rock</option>
+          <option value="metal">Metal</option>
+          <option value="jazz">Jazz</option>
+        </optgroup>
+        <optgroup label="Sport">
+          <option value="calcio">Calcio</option>
+          <option value="tennis">Tennis</option>
+          <option value="automobilismo">Automobilismo</option>
+        </optgroup>
+
+        <optgroup label="Cinema">
+          <option value="film">Film</option>
+          <option value="teatro">Teatro</option>
+        </optgroup>
       </select>
 
-    <div class="contenitorrrr" style="width:100%; margin-left: 0;">
-      <input type="submit" value="Ricerca eventi" style="border-radius: 25px; background-color: #ffb201; color: white; border: none; width: 50%; padding: 0.5%; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;">
+      <div class="contenitorrrr" style="width:100%; margin-left: 0;">
+        <input type="submit" value="Ricerca eventi"
+          style="cursor:pointer;border-radius: 25px; background-color: #ffb201; color: white; border: none; width: 50%; padding: 0.5%; margin: 8px 0; display: inline-block; border: 1px solid #ccc; box-sizing: border-box;">
+      </div>
     </div>
   </form>
 </div>

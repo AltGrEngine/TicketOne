@@ -7,8 +7,8 @@ public class Utente extends Entity{
     private String nome;
     private String cognome;
     private String email;
-    private Date dataNascita;
-    private String luogoNascita;
+    private Date datanascita;
+    private String luogonascita;
     private String username;
     private String password;
     
@@ -42,17 +42,17 @@ public class Utente extends Entity{
     public void setPassword(String password) {
         this.password = password;
     }
-    public Date getDataNascita() {
-        return dataNascita;
+    public Date getDatanascita() {
+        return datanascita;
     }
-    public void setDataNascita(Date dataNascita) {
-        this.dataNascita = dataNascita;
+    public void setDatanascita(Date datanascita) {
+        this.datanascita = datanascita;
     }
-    public String getLuogoNascita() {
-        return luogoNascita;
+    public String getLuogonascita() {
+        return luogonascita;
     }
-    public void setLuogoNascita(String luogoNascita) {
-        this.luogoNascita = luogoNascita;
+    public void setLuogonascita(String luogonascita) {
+        this.luogonascita = luogonascita;
     }
     
 

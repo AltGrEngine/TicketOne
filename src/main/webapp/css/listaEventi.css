@@ -1,0 +1,48 @@
+#table {
+    box-shadow: 0 1px 1px 0 rgba(60, 64, 67, .1), 0 1px 3px 1px rgba(60, 64, 67, .2);
+    border: 1 solid transparent;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 3%;
+}
+
+#lista_citta {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    font-size: 0.875rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    padding: 10px;
+    width: 100%;
+}
+
+#lista_eventi {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    font-size: 0.875rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    padding: 10px;
+    width: 100%;
+}
+
+#fromdate {
+    background-color: #fff;
+    width: 70%;
+    border: 1px solid #e5e7eb;
+    font-size: 0.875rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    padding: 10px;
+}
+
+#todate {
+    background-color: #fff;
+    width: 70%;
+    border: 1px solid #e5e7eb;
+    font-size: 0.875rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    padding: 10px;
+}

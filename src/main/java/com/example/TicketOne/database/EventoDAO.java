@@ -60,4 +60,13 @@ public class EventoDAO implements IDAO {
 		return ris;
     }
     
+    public Map<Integer, Entity> readByTitolo() {
+		String query = "select * from eventi where idcategoria = 1 group by titolo;";
+		
+		Map<Integer, Entity> ris = new HashMap<Integer, Entity>();
+		for(Entry<Integer, Map<String, String>> obj : db.executeQuery(query).entrySet()) {
+			ris.put(obj.getKey(), context.getBean(Evento.class, obj.getValue()));
+		}
+		return ris;
+	}
 }

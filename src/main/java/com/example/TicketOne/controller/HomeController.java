@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.TicketOne.database.UtentiDAO;
 import com.example.TicketOne.models.Utente;
+import com.example.TicketOne.service.EventoService;
 import com.example.TicketOne.service.UtenteService;
 
 @Controller
@@ -23,6 +24,9 @@ public class HomeController {
 
 	@Autowired
 	private UtentiDAO uDao;
+
+	@Autowired
+	private EventoService evService;
 
 	@Autowired
 	private UtenteService utService;
@@ -87,5 +91,12 @@ public class HomeController {
 		}
 	}
 	
+	@RequestMapping(path = "/concerti", method = RequestMethod.GET)
+	public String listaConcerti(@RequestParam Map<String, String> params, HttpSession session){
+
+		session.setAttribute("listaConcerti", evService.getEventoByTitolo());
+
+		return "concerti.html";
+	}
 
 }

@@ -19,13 +19,13 @@ public class UtentiDAO implements IDAO{
 
     @Override
     public boolean create(Entity e) {
-        String query = "insert into utenti(nome,cognome,dataNascita,email,luogoNascita,username,password) values(?,?,?,?,?,?,?)";
+        String query = "insert into utenti(nome,cognome,datanascita,email,luogonascita,username,password) values(?,?,?,?,?,?,?)";
         return db.executeUpdate(query, 
         ((Utente) e).getNome(), 
         ((Utente) e).getCognome(), 
-        ((Utente) e).getDataNascita()+"", 
+        ((Utente) e).getDatanascita()+"", 
         ((Utente) e).getEmail(), 
-        ((Utente) e).getLuogoNascita(), 
+        ((Utente) e).getLuogonascita(), 
         ((Utente) e).getUsername(), 
         ((Utente) e).getPassword());
     }
@@ -51,13 +51,13 @@ public class UtentiDAO implements IDAO{
 
     @Override
     public boolean update(Entity e) {
-        String query = "update utenti set nome = ?, cognome =?, dataNascita =?, email =?, luogoNascita =?, username =?, password =? where id = ?";
+        String query = "update utenti set nome = ?, cognome =?, datanascita =?, email =?, luogonascita =?, username =?, password =? where id = ?";
         return db.executeUpdate(query, 
         ((Utente) e).getNome(), 
         ((Utente) e).getCognome(), 
-        ((Utente) e).getDataNascita()+"", 
+        ((Utente) e).getDatanascita()+"", 
         ((Utente) e).getEmail(), 
-        ((Utente) e).getLuogoNascita(), 
+        ((Utente) e).getLuogonascita(), 
         ((Utente) e).getUsername(), 
         ((Utente) e).getPassword(), 
         (e.getId()+""));

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/footerstyle.css">
+    <link rel="stylesheet" href="css/stili.css">
+    <link rel="stylesheet" href="css/listaEventi.css">
+    <title>Concerti</title>
+</head>
+
+<body>
+    <script src="js/intestazione.js"></script>
+    <table id="table">
+        <thead></thead>
+        <tbody>
+            <tr style="text-align: left;">
+                <td>
+                    <select name="lista_citta" id="lista_citta" placeholder="lista citta" required="">
+                        <option value="" selected disabled hidden>Città</option>
+                        <option value="Milano">Milano</option>
+                        <option value="Torino">Torino</option>
+                        <option value="Genova">Genova</option>
+                        <option value="Roma">Roma</option>
+                        <option value="Firenze">Firenze</option>
+                        <option value="Napoli">Napoli</option>
+                        <option value="Palermo">Palermo</option>
+                        <option value="Bologna">Bologna</option>
+                        <option value="Venezia">Venezia</option>
+                        <option value="Bari">Bari</option>
+                        <option value="Cagliari">Cagliari</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="lista_eventi" id="lista_eventi" placeholder="lista eventi" required="">
+                        <option value="" selected disabled hidden>Eventi</option>
+                        <optgroup label="concerti">
+                            <option value="pop&rock">Pop&Rock</option>
+                            <option value="metal">Metal</option>
+                            <option value="jazz">Jazz</option>
+                        </optgroup>
+                        <optgroup label="Sport">
+                            <option value="calcio">Calcio</option>
+                            <option value="tennis">Tennis</option>
+                            <option value="automobilismo">Automobilismo</option>
+                        </optgroup>
+
+                        <optgroup label="Cinema">
+                            <option value="film">Film</option>
+                            <option value="teatro">Teatro</option>
+                        </optgroup>
+                    </select>
+                </td>
+                <td>
+                    <span style="margin-left: 10%;">da</span>
+                    <input class="data" type="date" placeholder="da" name="fromdate" id="fromdate">
+                </td>
+                <td>
+                    <span style="margin-left: 24%;">a</span>
+                    <input class="data" type="date" placeholder="da" name="todate" id="todate">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br><br><br><br><br><br>
+
+    <div th:each="concerti, iter : ${session.listaConcerti}" style="font-family: Arial, Helvetica, sans-serif;">
+        <div style="margin-left: 15.5%;
+                    text-align:center; 
+                    width:70%; 
+                    height:30%;
+                    border-style: solid; 
+                    border-width: 1px;
+                    color: aliceblue;
+                    background: rgb(15,15,15);
+                    background: linear-gradient(150deg, rgba(15,15,15,1) 0%, rgba(74,74,243,1) 80%); 
+                    border-radius: 10px;
+                    ">
+
+            <p name="nomeEvento" id="nomeEvento" style="font-size: x-large;float: left; margin-left: 3%;" th:text="${concerti.titolo}"></p>
+
+            <br>
+            <br>
+            <br>
+
+            <button type="submit" style="float: right; 
+                                         width:25%; 
+                                         border-radius: 2px;
+                                         margin-right: 2.5%; 
+                                         cursor: pointer;
+                                         border: none;"
+              class="tastoAcquista">Acquista</button>
+            <br>
+            <br>
+            <br>
+<!-- 
+            <form action="/evento">
+              <input type="submit" value="Mostra dettagli" name="evento" id="evento"
+                style="color: rgb(19, 157, 244); 
+                        float: right; margin-right: 2.5%; 
+                        border: none; 
+                        background-color: white; 
+                        text-decoration:underline; 
+                        cursor: pointer;">
+            </form> -->
+        </div>
+        <br><br>
+    </div>
+
+    <script src="js/footer.js"></script>
+</body>
+
+</html>
