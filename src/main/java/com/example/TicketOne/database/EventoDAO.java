@@ -1,5 +1,6 @@
 package com.example.TicketOne.database;
 
+import java.sql.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -47,6 +48,16 @@ public class EventoDAO implements IDAO {
     @Override
     public boolean delete(int id) {
         return false;
+    }
+
+    public Map<Integer, Entity> readEventoData(Date fromData, Date toData){
+        String query = "select * from eventi where dataevento between ? and ?";
+		
+		Map<Integer, Entity> ris = new HashMap<Integer, Entity>();
+		for(Entry<Integer, Map<String, String>> obj : db.executeQuery(query, fromData.toString(), toData.toString()).entrySet()) {
+			ris.put(obj.getKey(), context.getBean(Evento.class, obj.getValue()));
+		}
+		return ris;
     }
     
 }
