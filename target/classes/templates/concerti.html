@@ -10,12 +10,15 @@
 
 <body>
     <script src="js/intestazione.js"></script>
-    <table id="table">
+    <table id="table" style="background-color: #4F46E5;
+                            font-family: Arial, Helvetica, sans-serif;
+                            border-radius: 5px;"
+                            class="tableSearch">
         <thead></thead>
         <tbody>
             <tr style="text-align: left;">
-                <td>
-                    <select name="lista_citta" id="lista_citta" placeholder="lista citta" required="">
+                <td >
+                    <select name="lista_citta" id="lista_citta" placeholder="lista citta" required="" class="selectTipo">
                         <option value="" selected disabled hidden>Città</option>
                         <option value="Milano">Milano</option>
                         <option value="Torino">Torino</option>
@@ -31,7 +34,7 @@
                     </select>
                 </td>
                 <td>
-                    <select name="lista_eventi" id="lista_eventi" placeholder="lista eventi" required="">
+                    <select name="lista_eventi" id="lista_eventi" placeholder="lista eventi" required="" class="selectTipo">
                         <option value="" selected disabled hidden>Eventi</option>
                         <optgroup label="concerti">
                             <option value="pop&rock">Pop&Rock</option>
@@ -51,17 +54,21 @@
                     </select>
                 </td>
                 <td>
-                    <span style="margin-left: 10%;">da</span>
-                    <input class="data" type="date" placeholder="da" name="fromdate" id="fromdate">
+                    <span style="margin-left: 10%; color: aliceblue; font-size: small;">da</span>
+                    <input class="data selectData" type="date" placeholder="da" name="fromdate" id="fromdate">
                 </td>
                 <td>
-                    <span style="margin-left: 24%;">a</span>
-                    <input class="data" type="date" placeholder="da" name="todate" id="todate">
+                    <span style="margin-left: 24%; color: aliceblue; font-size: small;">a</span>
+                    <input class="data selectData" type="date" placeholder="da" name="todate" id="todate">
                 </td>
             </tr>
         </tbody>
     </table>
-    <br><br><br><br><br><br><br>
+    <br><br>
+    
+    <h2 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">LISTA DEI CONCERTI</h2>
+    <p style="text-align: center; font-family: Arial, Helvetica, sans-serif;">Qui troverai tutti i concerti cui potrai partecipare</p>
+    <br><br>
 
     <div th:each="concerti, iter : ${session.listaConcerti}" style="font-family: Arial, Helvetica, sans-serif;">
         <div style="margin-left: 15.5%;
@@ -92,16 +99,6 @@
             <br>
             <br>
             <br>
-<!-- 
-            <form action="/evento">
-              <input type="submit" value="Mostra dettagli" name="evento" id="evento"
-                style="color: rgb(19, 157, 244); 
-                        float: right; margin-right: 2.5%; 
-                        border: none; 
-                        background-color: white; 
-                        text-decoration:underline; 
-                        cursor: pointer;">
-            </form> -->
         </div>
         <br><br>
     </div>
