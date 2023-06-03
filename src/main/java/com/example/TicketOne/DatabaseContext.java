@@ -7,7 +7,7 @@ import com.example.TicketOne.database.BigliettiDAO;
 import com.example.TicketOne.database.Database;
 import com.example.TicketOne.database.EventoDAO;
 import com.example.TicketOne.database.GenereDAO;
-import com.example.TicketOne.database.LocalitaDAO;
+import com.example.TicketOne.database.CittaDAO;
 import com.example.TicketOne.database.LuoghiDAO;
 import com.example.TicketOne.database.UtentiDAO;
 
@@ -30,8 +30,8 @@ public class DatabaseContext {
 	}
 
 	@Bean
-	public LocalitaDAO localitaDao() {
-		return new LocalitaDAO();
+	public CittaDAO localitaDao() {
+		return new CittaDAO();
 	}
 
 	@Bean

@@ -18,7 +18,7 @@
         <tbody>
             <tr style="text-align: left;">
                 <td >
-                    <select name="lista_citta" id="lista_citta" placeholder="lista citta" required="" class="selectTipo">
+                    <select name="listacitta" id="listacitta" placeholder="Lista citta" required="" class="selectTipo">
                         <option value="" selected disabled hidden>Città</option>
                         <option value="Milano">Milano</option>
                         <option value="Torino">Torino</option>
@@ -34,7 +34,7 @@
                     </select>
                 </td>
                 <td>
-                    <select name="lista_eventi" id="lista_eventi" placeholder="lista eventi" required="" class="selectTipo">
+                    <select name="listaeventi" id="listaeventi" placeholder="Lista eventi" required="" class="selectTipo">
                         <option value="" selected disabled hidden>Eventi</option>
                         <optgroup label="concerti">
                             <option value="pop&rock">Pop&Rock</option>
@@ -83,15 +83,22 @@
                     border-radius: 10px;
                     ">
 
-            <p name="nomeEvento" id="nomeEvento" style="font-size: x-large;float: left; margin-left: 3%;" th:text="${concerti.titolo}"></p>
-
+            <p name="nomeEvento" id="nomeEvento" style="font-size: 
+                                                        x-large;float: left; 
+                                                        margin-left: 3%;">
+                                                        Titolo: 
+                                                        <span th:text="${concerti.titolo}"></span>    
+                                                    </p>
+            <p style="text-align: right;padding-right: 10px; ">Prezzo da: <span th:text="${concerti.prezzo}"></span> €</p>
+            <p>Luogo: <span th:text="${concerti.luogo}"></span></p>
+            <p></p>
             <br>
             <br>
             <br>
 
             <button type="submit" style="float: right; 
                                          width:25%; 
-                                         border-radius: 2px;
+                                         border-radius: 7px;
                                          margin-right: 2.5%; 
                                          cursor: pointer;
                                          border: none;"

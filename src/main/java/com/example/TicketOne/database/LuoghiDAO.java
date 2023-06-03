@@ -39,9 +39,9 @@ public class LuoghiDAO implements IDAO {
         return context.getBean(Luogo.class, db.executeQuery(query, id+"").get(id));
     }
 
-    public Luogo readOneLuogo(int id_localita){
-        String query = "select * from luoghi where id_localita = ?";
-        return context.getBean(Luogo.class, db.executeQuery(query, id_localita+"").get(id_localita));
+    public Luogo readOneLuogo(int idcitta){
+        String query = "select * from luoghi where idcitta = ?";
+        return context.getBean(Luogo.class, db.executeQuery(query, idcitta+"").get(idcitta));
     }
     
     @Override

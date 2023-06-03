@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import com.example.TicketOne.service.BigliettiService;
 import com.example.TicketOne.service.EventoService;
 import com.example.TicketOne.service.GenereService;
-import com.example.TicketOne.service.LocalitaService;
+import com.example.TicketOne.service.CittaService;
 import com.example.TicketOne.service.LuogoService;
 import com.example.TicketOne.service.UtenteService;
 
@@ -24,8 +24,8 @@ public class Context {
 	}
 
 	@Bean
-	public LocalitaService locService() {
-		return new LocalitaService();
+	public CittaService locService() {
+		return new CittaService();
 	}
 
 	@Bean

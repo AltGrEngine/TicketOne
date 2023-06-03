@@ -2,19 +2,30 @@ package com.example.TicketOne.models;
 
 public class Luogo extends Entity {
     
-    private String luogo;
-    private int id_localita;
-    public String getLuogo() {
-        return luogo;
+    private String nome;
+    private Citta citta;
+
+    public Citta getCitta() {
+        return citta;
     }
-    public void setLuogo(String luogo) {
-        this.luogo = luogo;
+    public void setCitta(Citta citta) {
+        this.citta = citta;
     }
-    public int getId_localita() {
-        return id_localita;
+    public String getNome() {
+        return nome;
     }
-    public void setId_localita(int id_localita) {
-        this.id_localita = id_localita;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
+    public int getIdCitta() {
+		return citta != null ? citta.getId() : 0;
+	}
+	public void setIdCitta(int idcitta) {
+		if(this.citta == null) 
+			this.citta = new Citta();
+		this.citta.setId(idcitta);
+	}
+    
+    
 }

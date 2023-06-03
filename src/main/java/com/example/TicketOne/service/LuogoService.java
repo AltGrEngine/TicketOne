@@ -11,11 +11,11 @@ import com.example.TicketOne.models.Luogo;
 
 public class LuogoService {
 
-
-
     @Autowired
     private LuoghiDAO lDao;
-
+    
+    @Autowired
+    private CittaService cService;
 
     public List<Luogo> getLuogo(){
 		List<Luogo> listLuoghi = new ArrayList<Luogo>();
@@ -25,6 +25,12 @@ public class LuogoService {
 		
 		return listLuoghi;
 	}
+
+    public Luogo getLuogoById(int id){
+        Luogo l = lDao.readOne(id);
+		l.setCitta(cService.getIdCitta(l.getIdCitta()));
+        return l;
+    }
 
     public Luogo getLuogo(int id){
         return lDao.readOne(id);

@@ -39,9 +39,9 @@ public class GenereDAO implements IDAO {
         return context.getBean(Genere.class, db.executeQuery(query, id+"").get(id));
     }
 
-    public Genere readOneGenere(int id_evento){
-        String query = "select * from generi where id_evento = ?";
-        return context.getBean(Genere.class, db.executeQuery(query, id_evento+"").get(id_evento));
+    public Genere readOneGenere(String genere){
+        String query = "select * from generi where genere = ?";
+        return context.getBean(Genere.class, db.executeQuery(query, genere));
     }
 
     @Override
